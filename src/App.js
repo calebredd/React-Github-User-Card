@@ -58,6 +58,9 @@ export default class App extends Component {
               placeholder="github username"
               onChange={handleChange}
             />
+            <button id="searchBtn" type="submit">
+              Search
+            </button>
           </form>
         </header>
         <div className="card">
@@ -74,6 +77,7 @@ export default class App extends Component {
             </p>
           </div>
         </div>
+        <h2 id="followTitle">Following:</h2>
         <div className="following">
           {this.state.following.map(follower => (
             <div key={follower.login} id={follower.login} className="follows">
